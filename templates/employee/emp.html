@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+
+<div class="row mt-5">
+    {% for emp in employees %}
+    <div class="col-12 col-md-4">
+        <div class="card mt-5">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="" alt="" class="card-img">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h2 class="card-title">{{emp.name}}</h2>
+                        <p class="card-text">{{emp.email}}</p>
+                        <p class="card-text"><small>{{emp.skills}}</small></p>
+                        <button class="btn btn-info">Contact</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor%}
+</div>
+
+
+{% endblock %}
