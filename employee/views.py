@@ -12,7 +12,7 @@ from .forms import EmployeeForm
 def index(request):
     employee = Employee.objects.all()
     context = {'employees': employee}
-    return render(request, 'emp.html', context)
+    return render(request, 'index.html', context)
 
 
 def Detail(request, pk):
